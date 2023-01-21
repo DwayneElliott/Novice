@@ -1,3 +1,7 @@
+print('Input Example')
+print('Author: Dwayne Elliott')
+print('Date: 01/21/2023')
+print()
 def Input_Example(): #Define code as a function
     prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
     speed=input(prompt)
