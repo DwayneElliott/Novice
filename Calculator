@@ -1,0 +1,230 @@
+def compare():
+    print()
+    print('Is x within y(+/-) of z?'.upper())
+    while True:
+        
+        try:    
+            x=float(input('Enter value of x: '.upper()))
+        except:
+            print('Please enter numbers only!!!'.upper())
+            compare()
+        try:
+            y=float(input('Enter value of y(+/-): '.upper()))
+        except:
+            print('Please enter numbers only!!!')
+            compare()
+        try:
+            z=float(input('Enter value of z: '.upper()))
+        except:
+            print('Please enter numbers only!!!')
+            compare()
+        def cal(x):
+            return ((abs(y - x) <= z))
+        print('IS',x,'WITHIN',y,'OF',z,'?')
+        print(cal(x))
+        restart=input('Would you like to exit?'.upper())
+        if restart=='Yes' or restart=='yes':
+            main()
+        else:
+            compare()
+def area_circle():
+    print('Area of circle')
+    print()
+    program=input('WHICH PROGRAM WOULD YOU LIKE TO RUN?\n1.Calculate the area of the circle with the radius.\n2.Calculate the area of the circle with the diameter.\n3.Calculate the area of the circle with the circumference.\n4.Main menu.\nEnter Number:')
+    if program=='1':
+        r()
+    elif program=='2':
+        d()
+    elif program=='3':
+        c()
+    elif program=='5':
+        main()
+    else:
+        main()
+    print()
+def r(): #Calculates the area using the radius
+    try:
+        r=float(input('Input the radius of a circle in inches:\n'.upper()))
+    except:
+        print('Please enter a number.'.upper())
+        area_circle()
+    area=3.14*r**2
+    print("The area of the circle with the radius of".upper(),r,"inches is".upper(),area,"square inches.".upper())
+    restart=input('Would you like to exit?')
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        area_circle()
+def d(): #Calculates the area using the diameter
+    try:
+        d=float(input('Input the diameter of a circle in inches:\n'.upper()))
+    except:
+        print('Please enter a number.'.upper())
+        area_circle()
+    area=3.14*d**2/4
+    print("The area of the circle with the diameter of".upper(),d,"inches is".upper(),area,"square inches.".upper())
+    restart=input('Would you like to exit?')
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        area_circle()
+def c(): #Calculates the area using the circumference
+    try:
+        c=float(input('Input the circumference of a circle in inches:\n'.upper()))
+    except:
+        print('Please enter a number.'.upper())
+        area_circle()
+    area=c**2/3.14*4
+    print("The area of the circle with the circumference of".upper(),c,"inches is".upper(),area,"square inches.".upper())
+    restart=input('Would you like to exit?')
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        area_circle()
+def max_min():
+    print()
+    print('MAX,MIN,TOTAL,AVERAGE CALCULATOR')
+    numlist=list()
+    while True:
+        inp=input('Enter a number:\n'.upper())
+        if inp=='done' or inp=='Done':break
+        value=float(inp)
+        numlist.append(value)
+        print('enter done to compute'.upper())
+    print('Count List:'.upper(),len(numlist))
+    print('Max Number:'.upper(),max(numlist))
+    print('Min  Number:'.upper(),min(numlist))
+    print('Total:'.upper(),sum(numlist))
+    print('Average:'.upper(),sum(numlist)/len(numlist))
+    restart=input('Would you like to exit?'.upper())
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        max_min()
+def vol_sphere():
+  print('Area of circle')
+  print()
+  program=input('WHICH PROGRAM WOULD YOU LIKE TO RUN?\n1.Calculate the volume of the sphere with the radius.\n2.Calculate the circumference of the sphere with the radius.\n3.Calculate the surface area of the circle with the radius.\n4.Main menu.\nEnter Number:')
+  if program=='1':
+        v()
+  elif program=='2':
+        d()
+  elif program=='3':
+        a()
+  elif program=='5':
+        main()
+  else:
+        main()
+def v(): #Calculates the volume using the radius
+    try:
+        r=float(input('Input the radius of a sphere in inches:\n'.upper()))
+    except:
+        print('Please enter a number.'.upper())
+        vol_sphere()
+    v=4.0/3.0*pi*r**3
+    print("The volume of the sphere with the radius of".upper(),r,"inches is".upper(),v,"qubic inches.".upper())
+    restart=input('Would you like to exit?')
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        vol_sphere()
+def c(): #Calculates the circumference of the sphere with the radius
+    try:
+        r=float(input('Input the radius of a circle in inches:\n'.upper()))
+    except:
+        print('Please enter a number.'.upper())
+        area_circle()
+    c=2*3.14*r
+    print("The circumference of the sphere with the radius of".upper(),r,"inches is".upper(),c,"inches.".upper())
+    restart=input('Would you like to exit?')
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        vol_sphere()
+def s(): #Calculates the surface area using the sphere
+    try:
+        r=float(input('Input the radius of the sphere in inches:\n'.upper()))
+    except:
+        print('Please enter a number.'.upper())
+        vol_sphere()
+    a=4*3.14*r**2
+    print("The surface area of the sphere with a radius of".upper(),r,"inches is".upper(),a,"square inches.".upper())
+    restart=input('Would you like to exit?')
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        vol_sphere()
+    print()
+    print()
+    print('Volume of a Sphere')
+    r=float(input('Enter the radius of the sphere in inches:\n'.upper()))
+    pi=3.1415926535897931
+    V=4.0/3.0*pi*r**3
+    print('The volume of the sphere is:'.upper(),V,'cubic inches'.upper())
+    restart=input('Would you like to exit?'.upper())
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        vol_sphere()
+        
+def circumference(): #Cir
+    print('Circumference of circle')
+    print()
+    program=input('WHICH PROGRAM WOULD YOU LIKE TO RUN?\n1.Calculate the circumference of the circle with the radius.\n2.Calculate the circumference of the circle with the diameter.\n3.Calculate the circumference of the circle with the area.\n4.Main menu.\nEnter Number:')
+    if program=='1':
+        r()
+    elif program=='2':
+        d()
+    elif program=='3':
+        a()
+    elif program=='5':
+        main()
+    else:
+        main()
+
+def r(): #Calculates the circumference using the radius
+    r=float(input('Enter the radius of the circle in inches:\n'.upper()))
+    pi=3.1415926535897931
+    c=2*pi*r
+    print('The circumference of the circle is:'.upper(),c,'inches'.upper())
+    restart=input('Would you like to exit?'.upper())
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        circumference()
+def d(): #Calculates the circumference using the diameter
+    d=float(input('Enter the diameter of the circle in inches:\n'.upper()))
+    pi=3.1415926535897931
+    c=pi*d
+    print('The circumference of the circle is:'.upper(),c,'inches'.upper())
+    restart=input('Would you like to exit?'.upper())
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        circumference()
+def a(): #Calculates the circumference using the area
+    a=float(input('Enter the area of the circle in inches^2:\n'.upper()))
+    pi=3.1415926535897931
+    c=2*math.sqrt(pi*a)
+    print('The circumference of the circle is:'.upper(),c,'inches'.upper())
+    restart=input('Would you like to exit?'.upper())
+    if restart=='Yes' or restart=='yes':
+        main()
+    else:
+        circumference()
+    
+def main():
+    print()
+    program=input('WHICH PROGRAM WOULD YOU LIKE TO RUN?\n1.Area of a Circle\n2.Circumference of a Circle\n3.Volume of a Sphere\n4.Compare Numbers\n5.Min,Max,and Average\nEnter Number:')
+    if program=='1':
+        area_circle()
+    elif program=='2':
+        circumference()
+    elif program=='3':
+        vol_sphere()
+    elif program=='4':
+        compare()
+    elif program=='5':
+        max_min()
+import math
+main()
